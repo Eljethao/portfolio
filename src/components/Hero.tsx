@@ -15,7 +15,7 @@ export function Hero() {
     <section id="home" className="hero container">
       <motion.div className="hero__copy" style={{ opacity: fade }}>
         <motion.span className="status-pill" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease }}>
-          <span className="status-dot" /> Leading engineering at Lailaolab · {profile.location.split(',')[0]}
+          <span className="status-dot" /> {profile.headline} at {profile.currentOrg} · {profile.location.split(',')[0]}
         </motion.span>
 
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1, ease }}>

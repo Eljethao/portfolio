@@ -34,9 +34,12 @@ export const profile = {
   name: 'Chouayeethao Cherching',
   shortName: 'Chouayeethao',
   initials: 'CT',
-  headline: 'Head of Software Development',
+  headline: 'Senior Software Engineer',
+  currentOrg: 'WHO Lao PDR',
   roles: [
-    'Head of Software Development',
+    'Senior Software Engineer @ WHO',
+    'Health Systems Engineer',
+    'Former Head of Software Development',
     'Senior Full-Stack Developer',
     'System Architect',
     'Engineering Leader',
@@ -46,9 +49,9 @@ export const profile = {
   phones: ['+856 20 98759831', '+856 20 51780246'],
   cvUrl: '/Chouayeethao_CV.pdf',
   intro:
-    'I architect and ship large-scale digital ecosystems — from fintech rails integrated with national banks to real-time EV charging and mobility platforms.',
+    'Senior Software Engineer at WHO Lao PDR, building the infrastructure and digital health systems behind public health — after years shipping fintech, logistics and EV platforms at scale.',
   about: [
-    'I am a dedicated Head of Software Development and Senior Full-Stack Developer with extensive experience in architecting and deploying large-scale digital ecosystems.',
+    'I am a Senior Software Engineer at WHO Lao PDR, responsible for infrastructure and health system development. Before that I was Head of Software Development at Lailaolab, with extensive experience in architecting and deploying large-scale digital ecosystems.',
     'I specialize in bridging technical strategy with business objectives, leading diverse teams of over 20 engineers to deliver high-impact solutions. My expertise spans from high-level system design and microservices to hands-on development in financial technology, logistics, and electric vehicle infrastructure.',
     'I am committed to maintaining high technical standards and driving innovation through modern DevOps and secure coding practices.',
   ],
@@ -58,16 +61,32 @@ export const profile = {
     { value: 3, suffix: '', label: 'Bank integrations' },
     { value: 9, suffix: '', label: 'Flagship systems' },
   ],
-  focus: ['Fintech', 'Logistics', 'EV Infrastructure', 'Microservices', 'DevSecOps'],
+  focus: ['Health Systems', 'Infrastructure', 'Fintech', 'Logistics', 'EV Infrastructure', 'DevSecOps'],
 }
 
 export const experience: Role[] = [
   {
+    title: 'Senior Software Engineer',
+    company: 'WHO Lao PDR',
+    location: 'Vientiane, Laos',
+    period: 'Aug 2026 — Present',
+    current: true,
+    points: [
+      {
+        label: 'Infrastructure',
+        text: 'Responsible for the infrastructure that runs WHO Lao PDR digital services.',
+      },
+      {
+        label: 'Health System Development',
+        text: 'Responsible for developing health information systems supporting public health work in Lao PDR.',
+      },
+    ],
+  },
+  {
     title: 'Head of Software Development',
     company: 'Lailaolab ICT Solutions Co., Ltd',
     location: 'Vientiane, Laos',
-    period: 'May 2024 — Present',
-    current: true,
+    period: 'May 2024 — Jul 2026',
     points: [
       {
         label: 'Strategic Leadership',
@@ -135,7 +154,7 @@ export const projects: Project[] = [
     id: 'ev-charging',
     title: 'EV Charging Platform',
     category: 'Mobility',
-    period: '2024 — Present',
+    period: '2024 — 2026',
     role: 'Head of Software Development',
     summary: 'Backend for electric-vehicle charge points speaking OCPP 1.6J, with real-time telemetry and remote control.',
     highlights: [
@@ -150,7 +169,7 @@ export const projects: Project[] = [
     id: 'call-taxi',
     title: 'Call Taxi System',
     category: 'Mobility',
-    period: '2024 — Present',
+    period: '2024 — 2026',
     role: 'Head of Software Development',
     summary: 'Ride-hailing platform with driver–rider matching, live GPS tracking and fare estimation.',
     highlights: ['Driver–rider matching engine', 'Live GPS tracking', 'Real-time fare estimation'],
@@ -161,7 +180,7 @@ export const projects: Project[] = [
     id: 'logistics',
     title: 'Logistics System',
     category: 'Logistics',
-    period: '2024 — Present',
+    period: '2024 — 2026',
     role: 'Head of Software Development',
     summary: 'Unified customer, driver and admin platforms covering transport, parcels, payments and operations monitoring.',
     highlights: ['Three connected client platforms', 'Integrated payments', 'Operations monitoring dashboards'],
@@ -172,7 +191,7 @@ export const projects: Project[] = [
     id: 'parcel-express',
     title: 'Parcel Delivery Express',
     category: 'Logistics',
-    period: '2024 — Present',
+    period: '2024 — 2026',
     role: 'Head of Software Development',
     summary: 'Scalable delivery service with real-time tracking, multi-payment support and dynamic pricing.',
     highlights: ['Real-time parcel tracking', 'Multi-payment support', 'Dynamic pricing by weight & distance'],

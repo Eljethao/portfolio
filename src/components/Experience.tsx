@@ -10,7 +10,7 @@ export function Experience() {
 
   return (
     <section id="experience" className="section container">
-      <SectionHeading index="02" eyebrow="Experience" title="From frontend lead to head of engineering." subtitle="Four-plus years at Lailaolab ICT Solutions, growing with every system shipped." />
+      <SectionHeading index="02" eyebrow="Experience" title="From frontend lead to health systems engineering." subtitle="Now at WHO Lao PDR, after four-plus years growing from frontend developer to Head of Software Development at Lailaolab." />
 
       <Reveal className="xp">
         <div className="xp__tabs" role="tablist" aria-label="Roles">

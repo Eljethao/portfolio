@@ -42,8 +42,9 @@ export function About() {
                 <span className="tk-k">const</span> <span className="tk-v">engineer</span> = {'{'}
                 {'\n'}  name: <span className="tk-s">'{profile.name}'</span>,
                 {'\n'}  role: <span className="tk-s">'{profile.headline}'</span>,
+                {'\n'}  org: <span className="tk-s">'{profile.currentOrg}'</span>,
                 {'\n'}  base: <span className="tk-s">'Vientiane, Laos'</span>,
-                {'\n'}  domains: [<span className="tk-s">'fintech'</span>, <span className="tk-s">'logistics'</span>, <span className="tk-s">'ev'</span>],
+                {'\n'}  domains: [<span className="tk-s">'health'</span>, <span className="tk-s">'fintech'</span>, <span className="tk-s">'logistics'</span>, <span className="tk-s">'ev'</span>],
                 {'\n'}  openToTalk: <span className="tk-k">true</span>,
                 {'\n'}{'}'}
               </code>
