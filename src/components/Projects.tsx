@@ -7,7 +7,7 @@ import { SectionHeading } from './SectionHeading'
 import { TiltCard } from './TiltCard'
 
 type Filter = 'All' | ProjectCategory
-const filters: Filter[] = ['All', 'Fintech', 'Mobility', 'Logistics', 'Platform']
+const filters: Filter[] = ['All', 'Personal', 'Fintech', 'Mobility', 'Logistics', 'Platform']
 
 interface Props {
   openId: string | null
@@ -50,7 +50,7 @@ export function Projects({ openId, onOpen }: Props) {
                       <li key={s}>{s}</li>
                     ))}
                   </ul>
-                  <span className="project-card__more mono">details →</span>
+                  <span className="project-card__more mono">{p.link ? 'live demo · details →' : 'details →'}</span>
                 </TiltCard>
               </motion.div>
             ))}
@@ -110,6 +110,11 @@ function ProjectModal({ project, onClose }: { project: Project | null; onClose: 
                 <li key={s}>{s}</li>
               ))}
             </ul>
+            {project.link && (
+              <a href={project.link} target="_blank" rel="noopener" className="btn btn--primary modal__cta">
+                Open live demo ↗
+              </a>
+            )}
           </motion.article>
         </motion.div>
       )}

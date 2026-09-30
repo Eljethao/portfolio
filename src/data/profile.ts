@@ -1,7 +1,7 @@
 // All portfolio content lives here, sourced from 2026_Chouayeethao_CV.pdf.
 // Edit this file to update the site — components only render what is defined below.
 
-export type ProjectCategory = 'Mobility' | 'Fintech' | 'Logistics' | 'Platform'
+export type ProjectCategory = 'Mobility' | 'Fintech' | 'Logistics' | 'Platform' | 'Personal'
 
 export interface Project {
   id: string
@@ -13,6 +13,8 @@ export interface Project {
   highlights: string[]
   stack: string[]
   accent: string
+  /** Live demo URL, if the project is publicly viewable. */
+  link?: string
 }
 
 export interface Role {
@@ -59,7 +61,7 @@ export const profile = {
     { value: 20, suffix: '+', label: 'Engineers led' },
     { value: 4, suffix: '+', label: 'Years shipping' },
     { value: 3, suffix: '', label: 'Bank integrations' },
-    { value: 9, suffix: '', label: 'Flagship systems' },
+    { value: 10, suffix: '', label: 'Projects shipped' },
   ],
   focus: ['Health Systems', 'Infrastructure', 'Fintech', 'Logistics', 'EV Infrastructure', 'DevSecOps'],
 }
@@ -150,6 +152,24 @@ export const experience: Role[] = [
 ]
 
 export const projects: Project[] = [
+  {
+    id: 'laos-travel',
+    title: 'Visit Laos — Travel Guide',
+    category: 'Personal',
+    period: '2026',
+    role: 'Designer & Developer',
+    summary: 'A modern, bilingual (Lao / English) travel guide for anyone visiting Laos, built around an interactive, zoomable map of all 18 provinces.',
+    highlights: [
+      'Full Lao ↔ English language toggle, remembered per visitor',
+      'Interactive SVG map that zooms smoothly to provinces, places and itinerary routes',
+      '18 destinations with freely licensed Wikimedia Commons photos and full attribution',
+      'Slide-in place details, photo gallery, month-by-month season & festival planner',
+      'Map data automatically checked so every pin sits in the right province',
+    ],
+    stack: ['ReactJS', 'TypeScript', 'd3-geo', 'Framer Motion', 'Vite'],
+    accent: '#4f7dd9',
+    link: '/laos-travel/index.html',
+  },
   {
     id: 'ev-charging',
     title: 'EV Charging Platform',
