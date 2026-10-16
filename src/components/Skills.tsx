@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { skillGroups, softSkills } from '../data/profile'
 import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
+import { TechLogo } from './TechLogo'
 
 const marquee = skillGroups.flatMap((g) => g.skills.map((s) => s.name))
 
@@ -19,7 +20,9 @@ export function Skills() {
           <div className="skills__groups">
             {skillGroups.map((g, i) => (
               <button key={g.name} className={i === active ? 'is-active' : ''} onClick={() => setActive(i)}>
-                <span className="skills__icon" aria-hidden="true">{g.icon}</span>
+                <span className="skills__icon" aria-hidden="true">
+                  <TechLogo name={g.logo} />
+                </span>
                 {g.name}
                 <span className="mono skills__n">{g.skills.length}</span>
               </button>
@@ -32,7 +35,10 @@ export function Skills() {
                 {group.skills.map((s, i) => (
                   <li key={s.name} className="bar">
                     <div className="bar__label">
-                      <span>{s.name}</span>
+                      <span className="bar__name">
+                        <TechLogo name={s.name} />
+                        {s.name}
+                      </span>
                       <span className="mono">{s.level}%</span>
                     </div>
                     <div className="bar__track">
@@ -55,7 +61,13 @@ export function Skills() {
       <div className="marquee" aria-hidden="true">
         <div className="marquee__track">
           {[...marquee, ...marquee].map((s, i) => (
-            <span key={i}>{s}<i>✦</i></span>
+            <span key={i}>
+              <b className="marquee__item">
+                <TechLogo name={s} />
+                {s}
+              </b>
+              <i>✦</i>
+            </span>
           ))}
         </div>
       </div>

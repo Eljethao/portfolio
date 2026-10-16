@@ -28,7 +28,8 @@ export interface Role {
 
 export interface SkillGroup {
   name: string
-  icon: string
+  /** Key into logos.ts — the logo shown on the group tab. */
+  logo: string
   skills: { name: string; level: number }[]
 }
 
@@ -278,7 +279,7 @@ export const projects: Project[] = [
 export const skillGroups: SkillGroup[] = [
   {
     name: 'Back End',
-    icon: '⚙',
+    logo: 'NodeJS',
     skills: [
       { name: 'NodeJS', level: 95 },
       { name: 'Express', level: 92 },
@@ -290,7 +291,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     name: 'Front End',
-    icon: '◧',
+    logo: 'ReactJS',
     skills: [
       { name: 'ReactJS', level: 95 },
       { name: 'TypeScript', level: 92 },
@@ -302,7 +303,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     name: 'Data',
-    icon: '◈',
+    logo: 'MongoDB',
     skills: [
       { name: 'MongoDB', level: 92 },
       { name: 'Redis', level: 85 },
@@ -312,7 +313,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     name: 'DevOps & Cloud',
-    icon: '☁',
+    logo: 'Docker',
     skills: [
       { name: 'System Design', level: 90 },
       { name: 'Docker', level: 85 },
@@ -322,7 +323,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     name: 'Integrations',
-    icon: '⇄',
+    logo: 'Stripe',
     skills: [
       { name: 'Bank APIs', level: 92 },
       { name: 'OCPP 1.6J', level: 85 },

@@ -1254,11 +1254,32 @@ kbd {
 .skills__icon {
   display: grid;
   place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
-  color: var(--accent);
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--text) 5%, transparent);
+  transition: border-color 0.2s;
+}
+
+.skills__groups button.is-active .skills__icon {
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+/* Tech logos (see TechLogo.tsx) */
+.logo {
+  display: inline-block;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.logo--mono {
+  background: currentColor;
+  -webkit-mask: var(--logo) center / contain no-repeat;
+  mask: var(--logo) center / contain no-repeat;
 }
 
 .skills__n {
@@ -1285,9 +1306,21 @@ kbd {
 
 .bar__label {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 8px;
   font-weight: 500;
+}
+
+.bar__name {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bar__name .logo {
+  width: 22px;
+  height: 22px;
 }
 
 .bar__label .mono {
@@ -1353,6 +1386,18 @@ kbd {
   font-weight: 600;
   color: var(--muted);
   white-space: nowrap;
+}
+
+.marquee__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: inherit;
+}
+
+.marquee__item .logo {
+  width: 1.1em;
+  height: 1.1em;
 }
 
 .marquee__track i {
